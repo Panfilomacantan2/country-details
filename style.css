@@ -28,6 +28,8 @@ header {
   align-items: center;
   padding: 20px 100px;
   background-color: #145da0;
+  z-index: 100;
+  box-shadow: #0c2d48 0 5px 6px;
 }
 header .search_container {
   position: relative;
@@ -55,14 +57,95 @@ header .search_container .search_icon {
   padding: 20px;
   gap: 20px;
   place-items: center;
-  margin-top: 100px;
+  margin-top: 190px;
 }
 
 .box {
   transition: all 0.5s ease-in-out;
   cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  padding: 30px;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
 }
-.country_container .box:hover {
-  transform: scale(1.1);
+
+.box .country_image {
+  width: 100%;
+  height: 80px;
+  object-fit: contain;
+}
+
+.box .country_name {
+  font-size: 1rem;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.category_container {
+  background-color: #145da0;
+  top: 110px;
+  z-index: 200;
+  position: fixed;
+  width: 520px;
+  padding: 12px 32px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.category_container .category_item {
+  border: none;
+  background: none;
   cursor: pointer;
+  color: #ddd;
+  border-right: 1px solid rgba(255, 255, 255, 0.6);
+  padding-right: 15px;
+}
+
+.category_container .category_item:hover {
+  color: #ececec;
+  font-weight: 500;
+}
+
+.country_length{
+  position: fixed;
+  z-index: 200;
+  top: 160px;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  header .search_container {
+    margin-top: 10px;
+  }
+
+  .country_container {
+    margin-top: 200px;
+  }
+
+  header .search_container {
+    width: 100%;
+    position: relative;
+  }
+  header .search_container .search_input {
+    width: 100%;
+    padding: 8px 30px;
+  }
+
+  .category_container {
+    flex-direction: column;
+  }
+
+  .category_container .category_item {
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: #ddd;
+    margin-top: 15px;
+  }
 }
