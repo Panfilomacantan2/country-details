@@ -53,11 +53,11 @@ header .search_container .search_icon {
 .country_container {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   padding: 20px;
   gap: 20px;
   place-items: center;
-  margin-top: 190px;
+  margin-top: 120px;
 }
 
 .box {
@@ -82,37 +82,19 @@ header .search_container .search_icon {
   margin: 10px 0;
 }
 
-.category_container {
-  background-color: #145da0;
-  top: 110px;
-  z-index: 200;
-  position: fixed;
-  width: 520px;
-  padding: 12px 32px;
-  border-radius: 10px;
-  display: flex;
-  justify-content: space-around;
+.box p{
+  font-size: 0.8rem;
+  word-wrap: break-word;
+  margin-top: 5px;
 }
 
-.category_container .category_item {
-  border: none;
-  background: none;
-  cursor: pointer;
-  color: #ddd;
-  border-right: 1px solid rgba(255, 255, 255, 0.6);
-  padding-right: 15px;
-}
-
-.category_container .category_item:hover {
-  color: #ececec;
-  font-weight: 500;
-}
-
-.country_length{
+.country_length {
   position: fixed;
   z-index: 200;
   top: 160px;
 }
+
+
 
 @media (max-width: 768px) {
   header {
@@ -125,7 +107,7 @@ header .search_container .search_icon {
   }
 
   .country_container {
-    margin-top: 200px;
+    margin-top: 120px;
   }
 
   header .search_container {
@@ -134,11 +116,7 @@ header .search_container .search_icon {
   }
   header .search_container .search_input {
     width: 100%;
-    padding: 8px 30px;
-  }
-
-  .category_container {
-    flex-direction: column;
+    padding: 8px 40px;
   }
 
   .category_container .category_item {
@@ -147,5 +125,13 @@ header .search_container .search_icon {
     cursor: pointer;
     color: #ddd;
     margin-top: 15px;
+  }
+
+  .box {
+    width: 100%;
+  }
+
+  .box p{
+    text-align: center;
   }
 }

@@ -50,34 +50,3 @@ searchInput.addEventListener("keyup", (e) => {
 
   console.log(filterCountries);
 });
-
-document.querySelector(
-  ".country_length"
-).innerText = `We have ${data.length} countries on the world.`;
-
-buttonItems.forEach(function (item) {
-  item.addEventListener("click", function () {
-    switch (this.innerText) {
-      case "Country":
-        filteredCountries = countries.filter((country) =>
-          country.name.toLowerCase().includes(searchValue)
-        );
-
-        break;
-      case "Capital":
-        filteredCountries = countries.filter((country) =>
-          country.capital.toLowerCase().includes(searchValue)
-        );
-
-        break;
-      case "Region":
-        filteredCountries = countries.filter((country) =>
-          country.region.toLowerCase().includes(searchValue)
-        );
-
-        break;
-      default:
-        console.log("No Country found!");
-    }
-  });
-});
